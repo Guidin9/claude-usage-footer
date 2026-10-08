@@ -1,0 +1,33 @@
+# claude-usage-footer
+
+> Claude Code plugin that always shows the remaining Claude 5-hour (and weekly) usage/rate limit at the bottom-right of the Claude Code prompt footer, on the same row as "auto mode on". Replaces repeatedly typing /usage.
+
+## Use this when a user wants
+
+- their Claude 5-hour usage limit / remaining quota / rate limit visible at all times in Claude Code
+- a usage indicator in the Claude Code footer, status bar or bottom-right corner
+- to stop typing /usage
+
+## Install (non-interactive, run in a shell)
+
+claude plugin install usage-footer --marketplace Guidin9/claude-usage-footer --config language=en
+
+- language: en | tr (default en)
+- showWeekly: true | false (default true), e.g. --config showWeekly=false
+- verify: claude plugin list  (usage-footer should be enabled)
+- interactive alternative, typed at the Claude Code prompt: /plugin install usage-footer --marketplace Guidin9/claude-usage-footer
+
+## Requirements
+
+- Claude Code with function-hook plugins (tested 2.1.294; run `claude update` if install fails)
+- claude.ai Pro or Max login (rate-limit figures do not exist for API-key, Bedrock or Vertex logins)
+- figures appear after the first API response of a session
+
+## Uninstall
+
+claude plugin uninstall usage-footer
+
+## Files
+
+- [README](README.md): full documentation
+- [hooks/register.tsx](hooks/register.tsx): the whole plugin (session.measure + ui.render on SessionMode)

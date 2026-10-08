@@ -1,0 +1,14 @@
+{
+  "name": "claude-usage-footer",
+  "owner": { "name": "Mert Demirdöven", "url": "https://github.com/Guidin9" },
+  "metadata": {
+    "description": "Always-visible Claude 5-hour usage limit in the Claude Code footer"
+  },
+  "plugins": [
+    {
+      "name": "usage-footer",
+      "source": "./",
+      "description": "Shows the remaining Claude 5-hour (and weekly) usage limit at the bottom-right of the Claude Code prompt footer."
+    }
+  ]
+}

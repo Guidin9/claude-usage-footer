@@ -1,0 +1,29 @@
+{
+  "name": "usage-footer",
+  "version": "1.0.0",
+  "description": "Shows how much of your Claude 5-hour (and weekly) usage limit is left, always visible at the bottom-right of the Claude Code prompt footer — no more typing /usage.",
+  "author": {
+    "name": "Mert Demirdöven",
+    "url": "https://github.com/Guidin9"
+  },
+  "homepage": "https://github.com/Guidin9/claude-usage-footer",
+  "repository": "https://github.com/Guidin9/claude-usage-footer",
+  "license": "MIT",
+  "keywords": ["usage", "rate-limit", "5-hour", "quota", "status", "footer", "claude-code"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "language": {
+      "type": "string",
+      "title": "Language",
+      "description": "Footer label language: en (English) or tr (Türkçe)",
+      "options": ["en", "tr"],
+      "default": "en"
+    },
+    "showWeekly": {
+      "type": "boolean",
+      "title": "Show weekly limit",
+      "description": "Also show what is left of the 7-day limit",
+      "default": true
+    }
+  }
+}
