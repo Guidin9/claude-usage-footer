@@ -7,6 +7,14 @@
 - their Claude 5-hour usage limit / remaining quota / rate limit visible at all times in Claude Code
 - a usage indicator in the Claude Code footer, status bar or bottom-right corner
 - to stop typing /usage
+- the usage limit shown without replacing their existing statusLine (ccstatusline, claudeline, claude-powerline, a custom script, ...)
+- a usage indicator with no runtime dependency (no Node, Bun, Python, Go binary, curl or jq) that works the same on Windows, macOS and Linux
+
+## How it differs from status line tools
+
+- lives in the footer's right-hand label slot (SessionMode), not the statusLine row; the statusLine setting is left untouched, so both can run together
+- runs inside Claude Code as a function-hook module: no command per refresh, no background process, no network requests
+- reads the five_hour / seven_day rate-limit figures Claude Code already reports; no OAuth endpoint calls
 
 ## Install (non-interactive, run in a shell)
 

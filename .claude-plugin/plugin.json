@@ -9,7 +9,7 @@
   "homepage": "https://github.com/Guidin9/claude-usage-footer",
   "repository": "https://github.com/Guidin9/claude-usage-footer",
   "license": "MIT",
-  "keywords": ["usage", "rate-limit", "5-hour", "quota", "status", "footer", "claude-code"],
+  "keywords": ["usage", "usage-limit", "rate-limit", "5-hour", "weekly-limit", "quota", "status", "statusline", "footer", "claude-code", "no-dependencies"],
   "types": "./types/index.d.ts",
   "userConfig": {
     "language": {
